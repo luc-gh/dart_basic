@@ -62,7 +62,9 @@ void main(){
   //---------------------------------------------------------------------------------------------------------------
   //Vetores (Matrizes ou arrays): List, Set e Map
   print("\n\n-- VETORES --\n");
-  print("LISTS\n");
+
+  //LISTAS: coleção ordenada de itens, separados por vírgulas e limitados por chaves.
+  print("LISTS");
 
   var auto = ['carro', 'barco', 'avião'];
   assert(auto.length == 3);  //assert confirma que a condição proposta é verdadeira (caso não seja, ocorre um erro)
@@ -92,8 +94,23 @@ void main(){
   var listaPlanetas = ["Planetas: ", for(var i in planetas)'$i'];  //Bug: a vírgula é anexada à String inicial
   print(listaPlanetas);
 
-  print("\nSETS\n");
+  //SETS: coleção desordenada de itens, separados por vírgula e limitados por colchetes.
+  print("\nSETS");
 
-
-
+  var halogenios = {'flúor', 'cloro', 'bromo', 'iodo', 'astato', 'tenesso'};
+  //Para criar sets vazios:
+  var vazio1 = <String>{};
+  Set<String> vazio2 = {};
+  print(vazio2);
+  //Para adicionar elementos:
+  vazio1.add("elemento");
+  vazio2.addAll(halogenios);
+  print(vazio2);
+  //Tamanho:
+  print(vazio2.length); //6
+  //Sets constantes:
+  final setConstante = const {1,2,3};
+  //setConstante.add(4); //Erro
+  print(setConstante);
+  //Operadores de propagação (... e ...?) e os comandos e if e for funcionam para sets assim como para lists.
 }
