@@ -178,6 +178,35 @@ void main(){
 
   //Operadores de propagação (... e ...?) e os comandos e if e for funcionam para sets assim como para lists.
 
-  //---------------------------------------------------------------------------------------------------------------
 
+  //---------------------------------------------------------------------------------------------------------------
+  //Runas: códigos numéricos inteiros referentes ao código do tipo Unicode de cada caractere
+  //A classe Runes é usada quando é necessário utilizar os códigos de médio nível (lidos pelo computador) dos caracteres de uma String
+  print('\nRUNES');
+
+  const sequencia = 'Dart-lang';
+  final r = sequencia.runes.toList();
+  print(r);  //imprimirá a sequência de códigos dos caracteres da String sequencia em forma de lista
+
+  //Construtor: cria um iterador para uma String
+  var runes = Runes('Palavra');
+  print(runes);
+  //Propriedades:
+  print(runes.first);       //imprime o código do primeiro caractere
+  print(runes.hashCode);    //mostra o código Hash da String
+  print(runes.isEmpty);     //retorna True se a String for vazia
+  print(runes.isNotEmpty);  //retorna True se a String não for vazia
+  print(runes.iterator);    //Cria uma nova instância da classe RunIterator
+  print(runes.last);        //retorna o último caractere da String
+  print(runes.length);      //retorna o número de caracteres da String
+  print(runes.runtimeType); //
+  print(runes.single);      //
+  print(runes.string);      //
+  //Alguns métodos (sem demonstração):
+  runes.any((T) => false);  //verifica se algum elemento do iterável satisfaz a condição T
+  runes.contains('P');      //verifica se a coleção tem o elemento citado
+  runes.elementAt(2);       //retorna o elemento do índice citado
+  runes.skip(2);            //retorna o iterável sem os elementos de índice menor que o valor citado
+  runes.take(3);            //retorna o iterável até o elemento com o índice citado
+  runes.toSet();            //cria um Set que contém os elementos
 }
