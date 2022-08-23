@@ -63,9 +63,12 @@ void main(){
   //Vetores (Matrizes ou arrays): List, Set e Map
   print("\n\n-- VETORES --\n");
 
+
+  //---------------------------------------------------------------------------------------------------------------
   //LISTAS: coleção ordenada de itens, separados por vírgulas e limitados por chaves.
   print("LISTS");
 
+  //---------------------------------------------------------------------------------------------------------------
   var auto = ['carro', 'barco', 'avião'];
   assert(auto.length == 3);  //assert confirma que a condição proposta é verdadeira (caso não seja, ocorre um erro)
 
@@ -94,6 +97,7 @@ void main(){
   var listaPlanetas = ["Planetas: ", for(var i in planetas)'$i'];  //Bug: a vírgula é anexada à String inicial
   print(listaPlanetas);
 
+  //---------------------------------------------------------------------------------------------------------------
   //SETS: coleção desordenada de itens, separados por vírgula e limitados por colchetes.
   print("\nSETS");
 
@@ -113,4 +117,67 @@ void main(){
   //setConstante.add(4); //Erro
   print(setConstante);
   //Operadores de propagação (... e ...?) e os comandos e if e for funcionam para sets assim como para lists.
+
+  //---------------------------------------------------------------------------------------------------------------
+  //MAPS: mapas são objetos que associam chaves e valores.
+  // É uma coleção de dados e características destes, separados por chaves e organizados com vírgulas e dois pontos.
+  var gasesNobres = {
+  //chave: valor
+    2: 'He',
+    10: 'Ne',
+    18: 'Ar',
+    36: 'Kr',
+    54: 'Xe',
+    86: 'Rn',
+    118: 'Og'
+  };
+  print(gasesNobres);
+  //Dart assumirá gasesNobres como do tipo Map<int, String>. Caso tente adicionar outra chave/valor que não seja desse padrão, ocorrerá um erro.
+
+  //Também é possível criar mapas com o construtor Map:
+  var moedas = Map<String, String>();
+  moedas['BRL'] = 'Real';
+  moedas['USD'] = 'Dólar estadunidense';
+  moedas['EUR'] = 'Euro';
+  moedas['GPB'] = 'Libra esterlina';
+  moedas['JPY'] = 'Iene';
+  moedas['CNY'] = 'Remimbi';
+  moedas['ARS'] = 'Peso Argentino';
+  print(moedas);
+
+  //Para adicionar uma chave e valor ao mapa:
+  var moveis = {'TV': 'sala'};
+  moveis['fogão'] = 'cozinha';
+  moveis['mesa'] = 'cozinha';
+  //As chaves são únicas, mas os valores podem se repetir.
+
+  //Para confirmar um valor:
+  bool? existe;
+  if(moveis['mesa'] == 'cozinha'){existe = true;};
+  print(existe);
+
+  //Ao acessar uma chaves inexistente, adquire-se o valor NULL:
+  var naoExiste = moveis['banheiro'];
+  print(naoExiste);
+
+  //O método .length acessa o número de pares de chaves e valores do mapa:
+  print(moedas.length); //7
+
+  //O comando const permite criar um mapa constante:
+  final mapaConstante = {
+    0: true,
+    1: false,
+    2: false,
+    3: true,
+    4: null,
+    5: false,
+    6: true
+  };
+  //mapaConstante[7] = true;  //Erro
+  print(mapaConstante);
+
+  //Operadores de propagação (... e ...?) e os comandos e if e for funcionam para sets assim como para lists.
+
+  //---------------------------------------------------------------------------------------------------------------
+
 }
