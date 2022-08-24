@@ -192,7 +192,7 @@ void main(){
   //Construtor: cria um iterador para uma String
   var runes = Runes('Palavra');
   print(runes);
-  //Propriedades:
+  //Algumas propriedades:
   print(runes.first);       //imprime o código do primeiro caractere
   print(runes.hashCode);    //mostra o código Hash da String
   print(runes.isEmpty);     //retorna True se a String for vazia
@@ -200,9 +200,8 @@ void main(){
   print(runes.iterator);    //Cria uma nova instância da classe RunIterator
   print(runes.last);        //retorna o último caractere da String
   print(runes.length);      //retorna o número de caracteres da String
-  print(runes.runtimeType); //
-  //print(runes.single);    //
-  print(runes.string);      //
+  print(runes.runtimeType); //retorna o tipo de dado da variável
+  print(runes.string);      //retorna a String atribuída à variável
   //Alguns métodos (sem demonstração):
   runes.any((T) => false);  //verifica se algum elemento do iterável satisfaz a condição T
   runes.contains('P');      //verifica se a coleção tem o elemento citado
