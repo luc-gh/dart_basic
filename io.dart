@@ -19,7 +19,6 @@ void main() {
     c = null;
   };
 
-
   //Métodos de escrita
   stdout.writeln("Valor de n: " + a.toString());  //writeln quebra uma linha
   stdout.writeln("O tipo de dado de a é: " + a.runtimeType.toString());

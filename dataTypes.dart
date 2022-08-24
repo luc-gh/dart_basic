@@ -71,6 +71,7 @@ void main(){
   //---------------------------------------------------------------------------------------------------------------
   var auto = ['carro', 'barco', 'avião'];
   assert(auto.length == 3);  //assert confirma que a condição proposta é verdadeira (caso não seja, ocorre um erro)
+  print(auto.runtimeType);
 
   var list = [1,2,3];
   assert(list[2] == 3);
@@ -200,7 +201,7 @@ void main(){
   print(runes.last);        //retorna o último caractere da String
   print(runes.length);      //retorna o número de caracteres da String
   print(runes.runtimeType); //
-  print(runes.single);      //
+  //print(runes.single);    //
   print(runes.string);      //
   //Alguns métodos (sem demonstração):
   runes.any((T) => false);  //verifica se algum elemento do iterável satisfaz a condição T
